@@ -8,7 +8,6 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: "Microsoft YaHei", "微软雅黑", sans-serif; color: #333; line-height: 1.8; }
 
-        /* Hero */
         .hero {
             background: linear-gradient(135deg, #1a73e8 0%, #0d47a1 100%);
             color: white; text-align: center; padding: 80px 20px 60px;
@@ -24,11 +23,9 @@
         .hero .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
         .hero .btn-outline { background: transparent; color: white; border: 2px solid white; }
 
-        /* Section */
         .section { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
         .section h2 { text-align: center; font-size: 32px; margin-bottom: 40px; color: #1a73e8; }
 
-        /* Features Grid */
         .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; }
         .feature-card {
             background: #f8f9fa; border-radius: 12px; padding: 30px 24px;
@@ -38,20 +35,22 @@
         .feature-card .icon { font-size: 48px; margin-bottom: 16px; }
         .feature-card h3 { font-size: 20px; margin-bottom: 8px; }
 
-        /* Feature Detail (左右交替) */
         .feature-detail { display: flex; align-items: center; gap: 40px; margin-bottom: 50px; flex-wrap: wrap; }
         .feature-detail.reverse { flex-direction: row-reverse; }
         .feature-detail .text { flex: 1; min-width: 280px; }
         .feature-detail .text h3 { font-size: 24px; color: #1a73e8; margin-bottom: 12px; }
         .feature-detail .text p { color: #555; }
         .feature-detail .img { flex: 1; min-width: 280px; text-align: center; }
-        .feature-detail .img-placeholder {
-            background: #e8f0fe; border-radius: 12px; width: 100%; height: 220px;
-            display: flex; align-items: center; justify-content: center;
-            color: #1a73e8; font-size: 16px;
+        .feature-detail .img img {
+            width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
         }
 
-        /* Table */
+        .demo-section { text-align: center; margin: 40px 0; }
+        .demo-section img {
+            max-width: 800px; width: 100%; border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+        }
+
         .table-wrapper { overflow-x: auto; }
         table { width: 100%; border-collapse: collapse; margin-top: 20px; }
         th, td { padding: 14px 16px; text-align: center; border-bottom: 1px solid #e0e0e0; }
@@ -61,7 +60,6 @@
         .check { color: #1a73e8; font-weight: bold; }
         .cross { color: #ccc; }
 
-        /* Buy */
         .buy-cards { display: flex; gap: 24px; justify-content: center; flex-wrap: wrap; }
         .buy-card {
             background: white; border: 2px solid #e0e0e0; border-radius: 12px;
@@ -79,7 +77,6 @@
         }
         .buy-card .btn-buy:hover { background: #1557b0; }
 
-        /* Footer */
         footer {
             background: #1a1a2e; color: #aaa; text-align: center;
             padding: 30px 20px; font-size: 14px;
@@ -90,18 +87,18 @@
 </head>
 <body>
 
-<!-- Hero -->
 <section class="hero">
     <h1>启界工作台</h1>
     <p class="tagline">你的数字工作管家 · 整理思维，一键触达</p>
     <div>
-        <a href="#" class="btn">⬇ 下载试用 (Windows)</a>
-        <a href="#" class="btn btn-outline">🛒 立即购买</a>
+        <!-- ⚠️ 把下面的 # 替换成你的 GitHub Release 下载链接 -->
+        <a href="https://github.com/qijie-studio/qijie-studio.github.io/releases/download/v1.0.0/QiJieWorkbench.exe" class="btn">⬇ 下载试用 (Windows)</a>
+        <a href="#buy" class="btn btn-outline">🛒 立即购买</a>
     </div>
+    <p style="font-size:14px; opacity:0.8; margin-top:8px;">适用系统：Windows 10 及以上</p>
     <p style="margin-top:16px;opacity:0.7;">免费试用30天 · 永久买断仅需 ¥19.9</p>
 </section>
 
-<!-- 核心功能 -->
 <section class="section">
     <h2>为什么选择启界工作台？</h2>
     <div class="features">
@@ -138,25 +135,67 @@
     </div>
 </section>
 
-<!-- 功能详情 1 -->
 <section class="section">
     <div class="feature-detail">
         <div class="text">
             <h3>🗂️ 多级分区树</h3>
             <p>无限层级分区，每个分区可设置专属Emoji图标。把工作、学习、生活按场景分类，告别桌面混乱，整理就是效率。</p>
         </div>
-        <div class="img"><div class="img-placeholder">📸 软件截图 - 分区树</div></div>
+        <div class="img">
+            <img src="images/screenshot1.png" alt="多级分区树">
+        </div>
     </div>
     <div class="feature-detail reverse">
         <div class="text">
             <h3>⚡ 全局热键 + 系统托盘</h3>
             <p>Ctrl+Shift+W 呼出/隐藏，Ctrl+Shift+A 快速添加文件。最小化后自动归入托盘，安静守护你的效率。</p>
         </div>
-        <div class="img"><div class="img-placeholder">📸 软件截图 - 热键</div></div>
+        <div class="img">
+            <img src="images/screenshot2.png" alt="全局热键与系统托盘">
+        </div>
     </div>
 </section>
 
-<!-- 版本对比 -->
+<section class="section">
+    <div class="feature-detail">
+        <div class="text">
+            <h3>🎨 8套精美主题</h3>
+            <p>从极简白到暗夜紫，从森林绿到暖橙，总有一款适合你的审美。字体大小无极调节，让眼睛在最舒适的状态下工作。</p>
+        </div>
+        <div class="img">
+            <img src="images/screenshot3.png" alt="主题切换效果">
+        </div>
+    </div>
+    <div class="feature-detail reverse">
+        <div class="text">
+            <h3>📊 批量导入 + 实时搜索</h3>
+            <p>支持CSV文件批量导入条目，也支持整文件夹递归导入。跨分区搜索功能让你在所有角落快速定位目标文件。</p>
+        </div>
+        <div class="img">
+            <img src="images/screenshot4.png" alt="批量导入与搜索">
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="demo-section">
+        <h3 style="margin-bottom:20px;">✨ 软件操作演示</h3>
+        <img src="images/demo.gif" alt="启界工作台操作演示">
+    </div>
+</section>
+
+<section class="section">
+    <div class="feature-detail">
+        <div class="text">
+            <h3>🔑 激活与授权</h3>
+            <p>30天免费试用，满意后购买卡密永久激活。一机一码绑定，安全可靠。支持换绑，换电脑无忧。</p>
+        </div>
+        <div class="img">
+            <img src="images/screenshot5.png" alt="激活与授权">
+        </div>
+    </div>
+</section>
+
 <section class="section" style="background:#f8f9fa; max-width:100%; padding:60px 20px;">
     <div style="max-width:900px; margin:0 auto;">
         <h2>版本对比</h2>
@@ -171,6 +210,7 @@
                 <tr><td>条目拖拽排序</td><td class="check">✅</td><td class="check">✅</td></tr>
                 <tr><td>批量导入 (CSV/文件夹)</td><td class="check">✅</td><td class="check">✅</td></tr>
                 <tr><td>Emoji分区图标 (13个预设)</td><td class="check">✅</td><td class="check">✅</td></tr>
+                <tr><td>一键备份/恢复数据</td><td class="cross">—</td><td class="check">✅ (V1.1)</td></tr>
                 <tr><td>自定义字体</td><td class="cross">—</td><td class="check">✅</td></tr>
                 <tr><td>分区条目计数</td><td class="cross">—</td><td class="check">✅</td></tr>
                 <tr><td>条目跨分区移动</td><td class="cross">—</td><td class="check">✅</td></tr>
@@ -184,8 +224,7 @@
     </div>
 </section>
 
-<!-- 购买 -->
-<section class="section">
+<section class="section" id="buy">
     <h2>购买渠道</h2>
     <div class="buy-cards">
         <div class="buy-card featured">
@@ -208,7 +247,6 @@
     </p>
 </section>
 
-<!-- Footer -->
 <footer>
     <p>© 2026 启界工作台 · 宁波鄞州启界软件开发工作室</p>
     <div class="contact">
