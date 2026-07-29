@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://qijie-studio.com/sitemap.xml
