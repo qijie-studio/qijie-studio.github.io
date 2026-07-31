@@ -4,6 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>启界工作台 - 你的数字工作管家</title>
+
+    <!-- ==================== SEO 优化标签 ==================== -->
+    <meta name="description" content="启界工作台是一款Windows效率工具，支持无限层级分区、全局热键呼出、8套精美主题、批量导入与实时搜索。免费试用30天，永久买断仅需¥19.9。">
+    <meta name="keywords" content="启界工作台,Windows效率工具,文件管理,桌面整理,热键工具,工作效率,分区管理">
+    <link rel="canonical" href="https://qijie-studio.com/">
+
+    <!-- Open Graph 协议（分享到社交媒体时显示） -->
+    <meta property="og:title" content="启界工作台 - 你的数字工作管家">
+    <meta property="og:description" content="Windows效率工具，免费试用30天，永久买断仅需¥19.9。">
+    <meta property="og:image" content="https://qijie-studio.com/images/screenshot1.png">
+    <meta property="og:url" content="https://qijie-studio.com">
+    <meta property="og:type" content="website">
+    <!-- ==================================================== -->
+
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         body { font-family: "Microsoft YaHei", "微软雅黑", sans-serif; color: #333; line-height: 1.8; }
@@ -22,6 +36,19 @@
         }
         .hero .btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
         .hero .btn-outline { background: transparent; color: white; border: 2px solid white; }
+
+        /* 下载按钮区域 */
+        .download-section { text-align: center; margin: 20px 0; }
+        .download-section .btn-download {
+            display: inline-block; background: #ff9800; color: white;
+            padding: 10px 24px; border-radius: 25px; font-size: 15px;
+            font-weight: bold; text-decoration: none; margin: 6px;
+            transition: 0.3s;
+        }
+        .download-section .btn-download:hover { background: #ffb74d; transform: translateY(-1px); }
+        .download-section .btn-download.blue { background: #1a73e8; }
+        .download-section .btn-download.blue:hover { background: #1557b0; }
+        .download-hint { color: #ffcc00; font-size: 13px; opacity: 0.9; margin-top: 6px; }
 
         .section { max-width: 1000px; margin: 0 auto; padding: 60px 20px; }
         .section h2 { text-align: center; font-size: 32px; margin-bottom: 40px; color: #1a73e8; }
@@ -87,18 +114,26 @@
 </head>
 <body>
 
+<!-- Hero -->
 <section class="hero">
     <h1>启界工作台</h1>
     <p class="tagline">你的数字工作管家 · 整理思维，一键触达</p>
-    <div>
-        <!-- ⚠️ 把下面的 # 替换成你的 GitHub Release 下载链接 -->
-        <a href="https://github.com/qijie-studio/qijie-studio.github.io/releases/download/v1.0.0/QiJieWorkbench.exe" class="btn">⬇ 下载试用 (Windows)</a>
+
+    <!-- 下载按钮区域 -->
+    <div class="download-section">
+        <a href="https://www.ilanzou.com/s/oD9LolEE?code=qjrj" class="btn-download blue" target="_blank">⬇ 蓝奏云下载</a>
+        <a href="https://pan.baidu.com/s/1YSKyY5MrrFtSzHWkUhGzoA?pwd=qjrj" class="btn-download" target="_blank">⬇ 百度网盘下载</a>
+        <p class="download-hint">蓝奏云提取码：【qjrj】 &nbsp;|&nbsp; 百度网盘提取码：【qjrj】</p>
+    </div>
+
+    <div style="margin-top: 10px;">
         <a href="#buy" class="btn btn-outline">🛒 立即购买</a>
     </div>
-    <p style="font-size:14px; opacity:0.8; margin-top:8px;">适用系统：Windows 10 及以上</p>
-    <p style="margin-top:16px;opacity:0.7;">免费试用30天 · 永久买断仅需 ¥19.9</p>
+    <p style="font-size:14px; opacity:0.8; margin-top:10px;">适用系统：Windows 10 及以上</p>
+    <p style="margin-top:10px;opacity:0.7;">免费试用30天 · 永久买断仅需 ¥19.9</p>
 </section>
 
+<!-- 核心功能 -->
 <section class="section">
     <h2>为什么选择启界工作台？</h2>
     <div class="features">
@@ -135,6 +170,7 @@
     </div>
 </section>
 
+<!-- 功能详情 1 -->
 <section class="section">
     <div class="feature-detail">
         <div class="text">
@@ -156,6 +192,7 @@
     </div>
 </section>
 
+<!-- 功能详情 2 -->
 <section class="section">
     <div class="feature-detail">
         <div class="text">
@@ -177,6 +214,7 @@
     </div>
 </section>
 
+<!-- 软件演示 GIF -->
 <section class="section">
     <div class="demo-section">
         <h3 style="margin-bottom:20px;">✨ 软件操作演示</h3>
@@ -184,6 +222,7 @@
     </div>
 </section>
 
+<!-- 激活说明 -->
 <section class="section">
     <div class="feature-detail">
         <div class="text">
@@ -196,6 +235,7 @@
     </div>
 </section>
 
+<!-- 版本对比 -->
 <section class="section" style="background:#f8f9fa; max-width:100%; padding:60px 20px;">
     <div style="max-width:900px; margin:0 auto;">
         <h2>版本对比</h2>
@@ -210,6 +250,7 @@
                 <tr><td>条目拖拽排序</td><td class="check">✅</td><td class="check">✅</td></tr>
                 <tr><td>批量导入 (CSV/文件夹)</td><td class="check">✅</td><td class="check">✅</td></tr>
                 <tr><td>Emoji分区图标 (13个预设)</td><td class="check">✅</td><td class="check">✅</td></tr>
+				<tr><td>文件一键迁移</td><td class="cross">—</td><td class="check">✅</td></tr>
                 <tr><td>一键备份/恢复数据</td><td class="cross">—</td><td class="check">✅ (V1.1)</td></tr>
                 <tr><td>自定义字体</td><td class="cross">—</td><td class="check">✅</td></tr>
                 <tr><td>分区条目计数</td><td class="cross">—</td><td class="check">✅</td></tr>
@@ -224,6 +265,7 @@
     </div>
 </section>
 
+<!-- 购买渠道 -->
 <section class="section" id="buy">
     <h2>购买渠道</h2>
     <div class="buy-cards">
@@ -232,14 +274,21 @@
             <div class="price">¥19.9</div>
             <p>搜索店铺名</p>
             <p><strong>小枫权益</strong></p>
-            <a href="#" class="btn-buy">前往淘宝</a>
+            <a href="https://item.taobao.com/item.htm?ft=t&id=1071374397151" class="btn-buy" target="_blank">前往淘宝</a>
         </div>
         <div class="buy-card">
             <h3>🐟 闲鱼店铺</h3>
             <div class="price">¥19.9</div>
             <p>搜索用户名</p>
             <p><strong>小枫权益</strong></p>
-            <a href="#" class="btn-buy">前往闲鱼</a>
+            <a href="https://m.tb.cn/h.8VLI63g?tk=7kIWgD5ukP9" class="btn-buy" target="_blank">前往闲鱼</a>
+        </div>
+        <div class="buy-card">
+            <h3>🐟 闲鱼店铺</h3>
+            <div class="price">¥19.9</div>
+            <p>搜索用户名</p>
+            <p><strong>小枫精品馆</strong></p>
+            <a href="https://m.tb.cn/h.8UcRd1k?tk=ohVxgD5HQqO" class="btn-buy" target="_blank">前往闲鱼</a>
         </div>
     </div>
     <p style="text-align:center; margin-top:24px; color:#999;">
@@ -247,8 +296,9 @@
     </p>
 </section>
 
+<!-- Footer -->
 <footer>
-    <p>© 2026 启界工作台 · 宁波鄞州启界软件开发工作室</p>
+    <p>© 2026 启界工作台 · 启界软件开发团队</p>
     <div class="contact">
         📧 QQ：1051239352 &nbsp;|&nbsp; 💬 微信：XiaoFeng2023168 &nbsp;|&nbsp;
         🌐 <a href="https://qijie-studio.com">qijie-studio.com</a>
